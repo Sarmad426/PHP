@@ -1,0 +1,16 @@
+.card-parent {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+}
+.card {
+  padding: 5px;
+  font-family: "dubai";
+  margin: 30px;
+  background-color: #eee;
+  border-radius: 8px;
+}
+.card img {
+  width: 400px;
+}
