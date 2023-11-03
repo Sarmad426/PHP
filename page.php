@@ -25,24 +25,7 @@ $result = mysqli_query($query,$search);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP</title>
-    <style>
-        .card-parent{
-            display:flex;
-            align-items:center;
-            justify-content: start;
-            gap: 10px;
-        }
-        .card{
-            padding: 5px;
-            font-family:'dubai';
-            margin: 30px;
-            background-color: #eee;
-            border-radius: 8px;
-        }
-        .card img{
-            width: 400px;
-        }
-    </style>
+    <link rel='stylesheet' href='page.css'/>
 </head>
 <body>
    <?php
