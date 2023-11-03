@@ -28,7 +28,7 @@ PHP Full stack development.
 $server = 'localhost';
 $username = 'root';
 $pass = '';
-$dbname = 'ecommerce';
+$dbname = 'ecommerce'; # name of the database
 
 $query = mysqli_connect($server,$username,$pass,$dbname);
 
@@ -40,7 +40,7 @@ if($query){
 
 echo "<br>";
 
-$search = "SELECT * FROM `products`";
+$search = "SELECT * FROM `products`"; # Name of the table
 
 $result = mysqli_query($query,$search);
 ?>
