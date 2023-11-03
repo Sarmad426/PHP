@@ -40,7 +40,7 @@ if($query){
 
 echo "<br>";
 
-$search = "SELECT * FROM `products`"; // name of the table
+$search = "SELECT * FROM `products`"; // Query the data using SQL from products table
 
 $result = mysqli_query($query,$search);
 ?>
