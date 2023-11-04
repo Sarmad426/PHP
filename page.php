@@ -7,11 +7,11 @@ $dbname = 'ecommerce';
 
 $query = mysqli_connect($server,$username,$pass,$dbname);
 
-if($query){
-    echo "Connection Successful";
-}else{
-    echo "Connection Error";
-}
+// if($query){
+//     echo "Connection Successful";
+// }else{
+//     echo "Connection Error";
+// }
 
 echo "<br>";
 
@@ -29,23 +29,15 @@ $result = mysqli_query($query,$search);
 </head>
 <body>
    <?php
-// Assuming you already have a database connection established
-
-// Fetch data from the database
-// $query = "SELECT id, title, category, image, price FROM products";
-// $result = mysqli_query($connection, $query);
-
-// Display data in cards
-
+   echo '<div class="card-parent">';
 while ($row = mysqli_fetch_assoc($result)) {
-    echo '<div class="card-parent">';
   echo '<div class="card">';
   echo '<img src="' . $row['image'] . '" alt="' . $row['title'] . '">';
   echo '<h3>' . $row['title'] . '</h3>';
   echo '<p class="price">$' . $row['price'] . '</p>';
   echo '</div>';
-  echo '</div>';
 }
+echo '</div>';
 
 mysqli_close($query);
 ?>
