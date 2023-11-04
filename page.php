@@ -24,7 +24,7 @@ $result = mysqli_query($query,$search);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP</title>
+    <title>PHP | E-commerce </title>
     <link rel='stylesheet' href='page.css'/>
 </head>
 <body>
@@ -32,7 +32,7 @@ $result = mysqli_query($query,$search);
    echo '<div class="card-parent">';
 while ($row = mysqli_fetch_assoc($result)) {
   echo '<div class="card">';
-  echo '<img src="' . $row['image'] . '" alt="' . $row['title'] . '">';
+  echo '<img src="'.$row['image'].'" alt="' . $row['title'] . '">';
   echo '<h3>' . $row['title'] . '</h3>';
   echo '<p class="price">$' . $row['price'] . '</p>';
   echo '</div>';
