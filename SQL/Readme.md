@@ -2,7 +2,7 @@
 
 SQL (Structured Query Language) is a domain-specific language used for managing and manipulating relational databases. It allows you to perform various operations on the data stored in a database, such as creating, retrieving, updating, and deleting records. Below, I'll provide examples of common CRUD (Create, Read, Update, Delete) operations using SQL, documented in Markdown format.
 
-## CRUD Operations in SQL
+## SQL Queries Guide
 
 ### Create Table
 
