@@ -114,3 +114,9 @@ You can enhance your WordPress website by coding custom plugins and themes in PH
 WordPress leverages PHP's flexibility to allow developers to tailor websites to their specific needs.
 
 In summary, PHP is a versatile server-side scripting language, and WordPress, built with PHP, provides a user-friendly platform for creating and managing websites and web content without extensive coding. You can use pre-designed themes and plugins or develop custom solutions in PHP to meet your specific web development requirements.
+
+## Tailwind CSS Watch Command
+
+```script
+npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
+```
