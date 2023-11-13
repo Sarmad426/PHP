@@ -25,10 +25,11 @@ $result = mysqli_query($query,$search);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP | E-commerce </title>
-    <link rel='stylesheet' href='page.css'/>
+    <link rel='stylesheet' href='/dist/output.css'/>
 </head>
 <body>
-   <?php
+  <?php
+ echo  '<h2 class="heading">Featured Products</h2>';
    echo '<div class="card-parent">';
 while ($row = mysqli_fetch_assoc($result)) {
   echo '<div class="card">';
