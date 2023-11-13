@@ -1,3 +1,6 @@
+.heading {
+  font-family: 200px;
+}
 .card-parent {
   display: flex;
   align-items: center;
