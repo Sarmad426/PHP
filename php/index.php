@@ -1,50 +1,32 @@
-<html>
-    <head>
-        <title>PHP</title>
-    </head>
-    <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="../CSS/sign-up.css">
+</head>
+<body>
+
+<div class="container">
+    <form action="signup.php" method="post">
+        <h2>Sign Up</h2>
+
         <?php
-        echo "Salman"
-        ?>
-        <!-- Variables -->
-        <?php
-        echo $name = 'Salman';
-        echo '<h3>' . $name . '</h3>';
-        ?>
-        <?php
-        echo $age = 20;
-        echo '<h3>' . $age . '</h3>';
-        ?>
-        <!-- Conditions -->
-        <?php
-        if($age<18){
-            echo '<h2>' . $name. ' Not Adult.</h2>';
-        }else{
-            echo '<h2>' . $name .' Adult</h2>';
+        if (isset($_GET['error'])) {
+            echo '<p class="error">Error: ' . $_GET['error'] . '</p>';
         }
         ?>
-        <!-- Loops -->
 
-        <!-- While Loop -->
-        <?php
-        $array = [1,2,3,4,5];
-        $count = 0;
-        while($count<5){
-            echo '<p>' . $array[$count] . '</p>';
-            echo '<br>';
-            $count+=1;
-        }
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
 
-        ?>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
 
-        <!-- For Loop -->
-        <?php
-         $array = ['Sarmad','Salman','Kashif','Imran','Mehboob'];
-         for($i=0;$i<5;$i+=1){
-            echo '<p>' . $array[$i] . '</p>';
-            echo '<br>';
-         }
-        ?>
+        <button type="submit">Sign Up</button>
+    </form>
+</div>
 
-    </body>
+</body>
 </html>
