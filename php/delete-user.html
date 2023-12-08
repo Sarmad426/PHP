@@ -1,0 +1,38 @@
+<!-- delete_user.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/delete-user.css" />
+    <title>Delete User</title>
+  </head>
+  <body>
+    <div class="delete-user-container">
+      <h2>Delete User</h2>
+      <form
+        action="delete-user.php"
+        method="post"
+        onsubmit="return showConfirmationModal()"
+      >
+        <label for="userId">User ID:</label>
+        <input type="text" name="userId" required />
+        <input type="submit" value="Delete User" />
+      </form>
+    </div>
+
+    <div id="confirmationModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeConfirmationModal()">&times;</span>
+        <p id="userInfo"></p>
+        <form id="confirmationForm" action="delete-user.php" method="post">
+          <input type="hidden" name="confirmedUserId" id="confirmedUserId" />
+          <input type="submit" value="Confirm Delete" />
+        </form>
+      </div>
+    </div>
+
+    <script src="../JS/delete-user.js"></script>
+  </body>
+</html>
