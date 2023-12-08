@@ -1,32 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="../CSS/login.css">
-</head>
-<body>
+<!-- login.php -->
 
-<div class="container">
-    <form action="login-php.php" method="post">
-        <h2>Login</h2>
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Database connection details
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "ecommerce";
 
-        <?php
-        if (isset($_GET['error'])) {
-            echo '<p class="error">Error: ' . $_GET['error'] . '</p>';
-        }
-        ?>
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
 
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
+    // Get user inputs from the form
+    $email = $_POST["email"];
+    $password = $_POST["password"];
 
-        <button type="submit">Login</button>
-    </form>
-</div>
+    // SQL query to check if the user exists with the provided email and password
+    $sql = "SELECT * FROM users WHERE email='$email' AND password='$password'";
+    $result = $conn->query($sql);
 
-</body>
-</html>
+    // Check if a matching user is found
+    if ($result->num_rows > 0) {
+        // Successful login
+        $user = $result->fetch_assoc();
+        echo "Hello, " . $user["name"] . "! Welcome back!";
+    } else {
+        // Invalid login
+        echo "Invalid email or password";
+    }
+
+    // Close the database connection
+    $conn->close();
+}
+?>
