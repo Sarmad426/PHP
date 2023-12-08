@@ -1,34 +1,37 @@
+<!-- signup.php -->
+
 <?php
-
-// Database connection details
-$host = "localhost";
-$username = "root";
-$password = "";
-$database = "ecommerce";
-
-// Create connection
-$conn = new mysqli($host, $username, $password, $database);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST['username'];
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+    // Database connection details
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "ecommerce";
 
-    // Insert user into the database
-    $sql = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
 
-    if ($conn->query($sql) === TRUE) {
-        header("Location: index.php");
-        exit();
-    } else {
-        header("Location: index.php?error=" . urlencode($conn->error));
-        exit();
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
     }
-}
 
-$conn->close();
+    // Get user inputs from the form
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+
+    // SQL query to insert data into the 'users' table
+    $sql = "INSERT INTO users (name, email, password) VALUES ('$name', '$email', '$password')";
+
+    // Execute the query
+    if ($conn->query($sql) === TRUE) {
+        echo "Registration successful!";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+
+    // Close the database connection
+    $conn->close();
+}
 ?>
