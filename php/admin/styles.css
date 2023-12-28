@@ -1,0 +1,46 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+#userTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#userTable th,
+#userTable td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+#userTable th {
+  background-color: #f2f2f2;
+}
+
+#userTable tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Add these styles to your existing styles.css file */
+
+/* Style for the Delete button */
+#userTable td form {
+  display: inline; /* Align buttons horizontally */
+}
+
+#userTable td form button {
+  background-color: #dc3545; /* Red background color */
+  color: #fff; /* White text color */
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+#userTable td form button:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
