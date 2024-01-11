@@ -7,11 +7,6 @@ $dbname = 'ecommerce';
 
 $query = mysqli_connect($server,$username,$pass,$dbname);
 
-// if($query){
-//     echo "Connection Successful";
-// }else{
-//     echo "Connection Error";
-// }
 
 echo "<br>";
 
