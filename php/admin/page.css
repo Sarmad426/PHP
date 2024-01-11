@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #ff6200; /* Light Orange */
+  --primary-color: #c26d05; /* Light Orange */
   --text-color: #333;
   --background-color: #f4f4f4;
 }
@@ -49,13 +49,14 @@ body {
 
 /* Hero Section Styles */
 .hero-section {
-  background-image: url("your-hero-image.jpg"); /* Add your hero image path */
+  background-image: url("../../images/hero\ image.jpg"); /* Add your hero image path */
   background-size: cover;
   background-position: center;
-  color: #fff;
+  color: #c26d05;
   text-align: center;
   padding: 100px 20px;
   position: relative;
+  height: 70vh;
 }
 
 .hero-content {
