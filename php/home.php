@@ -53,8 +53,8 @@ if ($result->num_rows > 0) {
     // Loop through each row and display the product card
     while ($row = $result->fetch_assoc()) {
         echo "<div class='product-card'>";
-        echo "<h3>{$row['title']}</h3>";
         echo "<img src='{$row['image']}' alt='Product Image'>";
+        echo "<h3>{$row['title']}</h3>";
         echo "<p>Price: {$row['price']}</p>";
         echo "<a href='#' class='btn-view-details'>View Details</a>";
         echo "</div>";
