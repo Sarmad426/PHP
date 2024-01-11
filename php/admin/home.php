@@ -10,12 +10,14 @@
 
     <!-- Navbar -->
     <nav class="navbar">
-        <div class="logo">Your Logo</div>
+        <div class="logo">
+          <img src="../images/MM.png" alt="Logo">
+        </div>
         <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact</a></li>
+          <li><a href="#">Products</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="./admin/users.php">Dashboard</a></li>
         </ul>
     </nav>
 
@@ -29,7 +31,7 @@
     </div>
 
     <!-- Product Cards Section -->
-    <div class="product-cards-section">
+    <div class="product-cards-section" id='products'>
    <?php
 // Connect to the database
 $conn = new mysqli("localhost", "root", "", "ecommerce");
