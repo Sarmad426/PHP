@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="page.css">
-    <title>Your E-Commerce Store</title>
+    <title>Manteese Mall</title>
 </head>
 <body>
 
     <!-- Navbar -->
     <nav class="navbar">
         <div class="logo">
-          <img src="../images/MM.png" alt="Logo">
+          <img src="../../images/MM.png" alt="Logo">
         </div>
         <ul class="nav-links">
-          <li><a href="#">Products</a></li>
-            <li><a href="signup.html">Sign Up</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="./admin/users.php">Dashboard</a></li>
+          <li><a href="#products">Products</a></li>
+            <li><a href="../signup.html">Sign Up</a></li>
+            <li><a href="../login.html">Login</a></li>
+            <li><a href="users.php">Dashboard</a></li>
         </ul>
     </nav>
 
