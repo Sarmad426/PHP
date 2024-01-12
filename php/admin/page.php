@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="page.css">
-    <title>Manteese Mall</title>
+    <title>Manteesa Mall</title>
 </head>
 <body>
 
@@ -15,16 +15,16 @@
         </div>
         <ul class="nav-links">
           <li><a href="#products">Products</a></li>
-            <li><a href="../signup.html">Sign Up</a></li>
-            <li><a href="../login.html">Login</a></li>
-            <li><a href="users.php">Dashboard</a></li>
+            <li><a href="../signup.html" target="blank">Sign Up</a></li>
+            <li><a href="../login.html" target="blank">Login</a></li>
+            <li><a href="users.php" target="blank">Dashboard</a></li>
         </ul>
     </nav>
 
     <!-- Hero Section -->
     <div class="hero-section">
         <div class="hero-content">
-            <h1>Welcome to Your E-Commerce Store</h1>
+            <h1>Welcome to Mantessa Mall</h1>
             <p>Discover amazing products and great deals.</p>
             <a href="#" class="btn-shop-now">Shop Now</a>
         </div>
