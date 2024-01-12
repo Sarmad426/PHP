@@ -2,6 +2,7 @@
   --primary-color: #c26d05; /* Light Orange */
   --text-color: #333;
   --background-color: #f4f4f4;
+  --hover-color: #c23e73;
 }
 
 body {
@@ -87,7 +88,7 @@ body {
 }
 
 .btn-shop-now:hover {
-  background-color: #ff8c00; /* Darker Orange on hover */
+  background-color: red;
 }
 
 /* Product Cards Section Styles */
@@ -146,7 +147,7 @@ body {
 }
 
 .btn-view-details:hover {
-  background-color: #ff8c00; /* Darker Orange on hover */
+  background-color: var(--hover-color); /* Darker Orange on hover */
 }
 
 /* Footer Styles */
