@@ -2,14 +2,14 @@
 
 ## Instructions To get started using php locally
 
-- Start XAMP Control Panel.
+- Start XAMPP Control Panel.
 - Start MYSQL and Apache.
 - Open browser at **localhost** to test application state.
-- open **xamp** folder where it is installed.
+- open **xampp** folder where it is installed.
 - find `htdocs` folder.
 - Create a folder inside and open in code editor.
 - Create a `php` file.
-- open browser and go to `http://localhost/foldername/filename.php` .
+- open browser and go to `http://localhost/foldername/filename.php`.
 
 ## Database
 
@@ -25,7 +25,7 @@
 $server = 'localhost';
 $username = 'root';
 $pass = '';
-$dbname = 'ecommerce'; // name of the database
+$dbname = 'db_name'; // name of the database
 
 $query = mysqli_connect($server,$username,$pass,$dbname);
 
@@ -37,7 +37,7 @@ if($query){
 
 echo "<br>";
 
-$search = "SELECT * FROM `products`"; // Query the data using SQL from products table
+$search = "SELECT * FROM `table_name`"; // Query the data using SQL from products table
 
 $result = mysqli_query($query,$search);
 ?>
